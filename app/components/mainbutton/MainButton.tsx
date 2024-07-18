@@ -1,5 +1,6 @@
 import { use, useState } from "react"
 import styles from "./MainButton.module.scss"
+import Checkbox from "../checkbox/Checkbox";
 
 export default function MainButton(){
   const [num,setNum]= useState(0);
@@ -24,8 +25,8 @@ export default function MainButton(){
         placeholder="type your name"
         onChange={onChange}
         >
-        
         </input>
+        <Checkbox/>
         </div>
     )
 }
