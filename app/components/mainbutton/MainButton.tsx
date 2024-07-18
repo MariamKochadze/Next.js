@@ -1,4 +1,4 @@
-import { use, useState } from "react"
+import React, {useState } from "react"
 import styles from "./MainButton.module.scss"
 import Checkbox from "../checkbox/Checkbox";
 
@@ -9,9 +9,8 @@ export default function MainButton(){
   function hanlderClick(){
         setNum(num+1)
   }
-  const onChange = (e) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setText(e.target.value)
-     
   }
 
     return(

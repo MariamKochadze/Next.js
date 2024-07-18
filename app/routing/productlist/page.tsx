@@ -1,9 +1,15 @@
 'use client'
 
-import { useEffect, useState } from "react"
-import styles from "./page.module.scss"
+import { useEffect, useState } from "react";
+import styles from "./page.module.scss";
 
-export default function aboutus(){
+type Product = {
+ title: string,
+ image: string,
+ id: string
+}
+
+const ProductList: React.FC = () => {
 const [products, setProducts]=useState([])
 
 useEffect(()=>{
@@ -17,7 +23,7 @@ useEffect(()=>{
     return(
         <div className={styles.container}>
             {
-                products.map((product)=>{
+                products.map((product: Product)=>{
                     return (
                         <div key={product.id}>
                             <img src={product.image}/>
@@ -29,3 +35,5 @@ useEffect(()=>{
         </div>
     )
 }
+
+export default ProductList;
