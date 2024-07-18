@@ -8,7 +8,7 @@ export default function Header(){
         <header className={style.container1}>
         <Link href="/"></Link>
          <Link href="/routing/main">Main</Link>
-         <Link href="/routing/aboutus">About Us</Link>
+         <Link href="/routing/productlist">Product List</Link>
          <Link href="/routing/contactus">Contact Us</Link>
         </header>
     )
