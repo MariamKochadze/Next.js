@@ -1,6 +1,11 @@
 'use client'
+
+import MainButton from "@/app/components/mainbutton/MainButton"
+
 export default function main (){
     return(
-        <div className="div-container">Main</div>
+        <div >
+        <MainButton/>
+        </div>
     )
 }
