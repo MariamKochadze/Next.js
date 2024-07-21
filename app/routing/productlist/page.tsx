@@ -3,14 +3,15 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 import Loader from "@/app/components/loader/Loader";
+import { ProductList } from "@/app/components/product-list/ProductList";
 
-type Product = {
+export type Product = {
  title: string,
  image: string,
  id: string
 }
 
-const ProductList: React.FC = () => {
+const ProductPage: React.FC = () => {
 const [products, setProducts]=useState([]);
 const [isLoading, setIsLoading] = useState(true);
 
@@ -27,22 +28,14 @@ useEffect(()=>{
 
     return(
         <div className={styles.container}>
-
             {
                 isLoading ? 
                 <Loader/>
                 :
-                products.map((product: Product)=>{
-                    return (
-                        <div key={product.id}>
-                            <img src={product.image}/>
-                            <p>{product.title}</p>
-                        </div>
-                    )
-                })
+               <ProductList products={products}/>
             }
         </div>
     )
 }
 
-export default ProductList;
+export default ProductPage;

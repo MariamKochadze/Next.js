@@ -10,6 +10,8 @@ export default function Header(){
          <Link href="/routing/main">Main</Link>
          <Link href="/routing/productlist">Product List</Link>
          <Link href="/routing/contactus">Contact Us</Link>
+         <Link href="/routing/context">Context API</Link>
+         <Link href="/routing/users">Users</Link>
         </header>
     )
 }
